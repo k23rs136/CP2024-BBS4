@@ -507,3 +507,19 @@ textarea.form-control {
 .logged-out {
     display: none;
 }
+
+
+.btn-theme-toggle {
+    background-color: #696969;
+    color: #ffffff;
+    border: 1px solid #696969;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+
+
+
+
