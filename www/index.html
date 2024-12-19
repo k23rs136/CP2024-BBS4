@@ -513,13 +513,31 @@ window.addEventListener('unload', function() {
         postsListener = null;
     }
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const body = document.body;
+    const toggleThemeBtn = document.getElementById('toggleTheme');
+
+    if (toggleThemeBtn) {
+        toggleThemeBtn.addEventListener('click', () => {
+            body.classList.toggle('dark');
+            
+            const isDark = body.classList.contains('dark');
+            toggleThemeBtn.textContent = isDark ? 'ダークモード解除' : 'ダークモード有効';
+        });
+    }
+});
+
+
+
     </script>
 </head>
 <body>
     <div class="container">
         <h1>掲示板アプリ</h1>
 
-        <button id="toggleTheme" class="btn-theme-toggle">通常 ⇔ ダーク</button> 
+        <button id="toggleTheme" class="btn-toggle">ダークモード有効</button> 
         
         <!-- メッセージ表示エリア -->
         <div id="messageArea"></div>
